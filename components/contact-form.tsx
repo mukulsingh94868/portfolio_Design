@@ -3,40 +3,72 @@
 import { useState } from "react";
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
-    "idle",
-  );
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    description: "",
+  });
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
-    const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form));
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-    setStatus(res.ok ? "sent" : "error");
-    if (res.ok) form.reset();
-  }
+    try {
+      const response = await fetch(
+        "https://gmail-bot-backend-w9ut.onrender.com/api/contact/mail-send",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        },
+      );
+      console.log("Response:", response);
+      const result = await response.json();
+      console.log("Result:", result);
+
+      if (result.statusCode === 201) {
+        setStatus("success");
+        alert(result?.message || "Message sent successfully!");
+        setFormData({ name: "", email: "", description: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4 max-w-xl">
+    <form onSubmit={handleSubmit} className="space-y-4 max-w-xl">
       <input
         name="name"
+        value={formData.name}
+        onChange={handleChange}
         required
-        placeholder="Your name"
+        placeholder="Enter Your Name"
         className="w-full px-4 py-2 rounded-md border border-slate-300 dark:border-slate-700 bg-transparent"
       />
       <input
         type="email"
         name="email"
+        value={formData.email}
+        onChange={handleChange}
         required
-        placeholder="Email"
+        placeholder="Enter Email Id"
         className="w-full px-4 py-2 rounded-md border border-slate-300 dark:border-slate-700 bg-transparent"
       />
       <textarea
-        name="message"
+        name="description"
+        value={formData.description}
+        onChange={handleChange}
         required
         placeholder="Message"
         rows={5}
@@ -44,15 +76,17 @@ export default function ContactForm() {
       />
       <button
         disabled={status === "loading"}
-        className="px-5 py-2 rounded-md bg-blue-600 text-white"
+        className="px-5 py-2 rounded-md bg-blue-600 text-white disabled:opacity-50"
       >
         {status === "loading" ? "Sending..." : "Send"}
       </button>
-      {status === "sent" && (
-        <p className="text-green-600">Thanks! I’ll get back soon.</p>
+      {status === "success" && (
+        <p className="text-green-600">Message sent successfully!</p>
       )}
       {status === "error" && (
-        <p className="text-red-600">Something went wrong.</p>
+        <p className="text-red-600">
+          Failed to send message. Please try again.
+        </p>
       )}
     </form>
   );
