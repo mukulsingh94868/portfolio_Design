@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -13,7 +12,7 @@ type SocialLinksProps = {
   tone?: Tone;
   linkedin?: string;
   github?: string;
-  resumeHref?: string; // e.g., "/Mukul-Singh-Resume.pdf"
+  resumeHref?: string; // e.g., "/Mukul_Resume_MERN_9694195035-1.pdf"
   showLabels?: boolean;
   className?: string;
 };
@@ -23,7 +22,7 @@ export default function SocialLinks({
   tone = "soft",
   linkedin = "https://www.linkedin.com/in/mukul-singh-876321189/",
   github = "https://github.com/mukulsingh94868",
-  resumeHref = "/Mukul-Singh-Resume.pdf",
+  resumeHref = "/Mukul_Resume_MERN_9694195035-1.pdf",
   showLabels = true,
   className = "",
 }: SocialLinksProps) {
@@ -97,7 +96,11 @@ export default function SocialLinks({
         className={s.primary}
         aria-label="Open LinkedIn in new tab"
       >
-        <SiLinkedin className={s.icon + " group-hover:-translate-y-0.5 group-hover:scale-110"} />
+        <SiLinkedin
+          className={
+            s.icon + " group-hover:-translate-y-0.5 group-hover:scale-110"
+          }
+        />
         {showLabels && <span className={s.label}>LinkedIn</span>}
       </a>
 
@@ -109,13 +112,26 @@ export default function SocialLinks({
         className={s.secondary}
         aria-label="Open GitHub in new tab"
       >
-        <SiGithub className={s.icon + " group-hover:-translate-y-0.5 group-hover:scale-110"} />
+        <SiGithub
+          className={
+            s.icon + " group-hover:-translate-y-0.5 group-hover:scale-110"
+          }
+        />
         {showLabels && <span className={s.label}>GitHub</span>}
       </a>
 
       {/* Resume (internal file, new tab) */}
-      <Link href={resumeHref} target="_blank" rel="noopener noreferrer" className={s.secondary}>
-        <AiOutlineFile className={s.icon + " group-hover:-translate-y-0.5 group-hover:scale-110"} />
+      <Link
+        href={resumeHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={s.secondary}
+      >
+        <AiOutlineFile
+          className={
+            s.icon + " group-hover:-translate-y-0.5 group-hover:scale-110"
+          }
+        />
         {showLabels && <span className={s.label}>Resume</span>}
       </Link>
     </div>

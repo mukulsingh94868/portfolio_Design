@@ -28,7 +28,6 @@ export default function ContactPage() {
               </p>
             </div>
 
-
             <div>
               <p className="text-slate-500 font-medium">Location</p>
               <p className="mt-1 text-slate-800 dark:text-slate-200">
@@ -65,7 +64,7 @@ export default function ContactPage() {
               variant="hero"
               linkedin="https://www.linkedin.com/in/mukul-singh-876321189/"
               github="https://github.com/mukulsingh94868"
-              resumeHref="/Mukul-Singh-Resume.pdf"
+              resumeHref="/Mukul_Resume_MERN_9694195035-1.pdf"
               showLabels
             />
           </div>

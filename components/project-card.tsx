@@ -24,10 +24,10 @@ export default function ProjectCard({ p }: { p: Project }) {
             href={p.live}
             target="_blank"
           >
-            Live ↗
+            Live URL ↗
           </Link>
         )}
-        {p.repo && (
+        {/* {p.repo && (
           <Link
             className="text-slate-600 dark:text-slate-300"
             href={p.repo}
@@ -35,7 +35,7 @@ export default function ProjectCard({ p }: { p: Project }) {
           >
             Code ↗
           </Link>
-        )}
+        )} */}
       </div>
     </article>
   );

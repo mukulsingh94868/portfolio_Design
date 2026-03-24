@@ -84,7 +84,7 @@ export default function Hero() {
               variant="hero"
               linkedin="https://www.linkedin.com/in/mukul-singh-876321189/"
               github="https://github.com/mukulsingh94868"
-              resumeHref="/Mukul-Singh-Resume.pdf"
+              resumeHref="/Mukul_Resume_MERN_9694195035-1.pdf"
               showLabels
             />
           </div>
