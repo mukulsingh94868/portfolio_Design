@@ -23,7 +23,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 backdrop-blur bg-white/60 dark:bg-black/30 border-b border-slate-200/50 dark:border-slate-800">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="font-semibold">
-          Mukul<span className="text-blue-600 dark:text-indigo-400">.</span>
+          Mukul<span className="text-blue-600 dark:text-indigo-400"> Portfolio</span>
         </Link>
         <nav className="hidden md:flex gap-6">
           {nav.map((n) => (

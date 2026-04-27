@@ -64,4 +64,13 @@ export const projects: Project[] = [
     live: "https://gmail-bot-six.vercel.app",
     repo: "https://github.com/mukulsingh94868/gmail_bot",
   },
+  {
+    slug: "time-tracker",
+    title: "Time Tracker – Simple and Efficient Time Tracking Service",
+    summary:
+      "A lightweight time tracking service that allows users to monitor their work hours and productivity. Check custom time as well as automatic time tracking. Given a video tutorial, to show how it works. Built with a modern stack for performance and scalability.",
+    tech: ["Next.js", "Tailwind", "Netlify"],
+    live: "https://zentek-time-tracker.netlify.app/home",
+    repo: "https://github.com/mukulsingh94868/time_tracker",
+  },
 ];
