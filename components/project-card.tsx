@@ -1,7 +1,6 @@
 import Link from "next/link";
-import type { Project } from "@/lib/projects";
 
-export default function ProjectCard({ p }: { p: Project }) {
+export default function ProjectCard({ p }: any) {
   return (
     <article className="group rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
       
@@ -17,7 +16,7 @@ export default function ProjectCard({ p }: { p: Project }) {
 
       {/* Tech */}
       <div className="mt-4 flex flex-wrap gap-2">
-        {p.tech.map((t) => (
+        {p.tech.map((t: any) => (
           <span
             key={t}
             className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
