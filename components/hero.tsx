@@ -17,65 +17,64 @@ export default function Hero() {
           {/* Availability / quick pill */}
           <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/60 dark:border-indigo-800/60 bg-blue-50/60 dark:bg-indigo-900/20 px-3 py-1 text-xs text-blue-700 dark:text-indigo-300">
             <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
-            Available for select freelance projects
+            Available for full-time roles & high-impact projects
           </div>
 
           <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight">
             Mukul Singh
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
-              Software Engineer & Freelance Developer
+              Full Stack Developer focused on scalable backend systems
             </span>
           </h1>
 
           <p className="mt-6 text-lg text-slate-700 dark:text-slate-300">
-            I craft <strong>fast</strong>, <strong>modern</strong>, and{" "}
-            <strong>scalable</strong> web products using
-            <span className="font-semibold"> Next.js</span>,{" "}
-            <span className="font-semibold">TypeScript</span>, and a robust
-            backend stack. I’ve built <em>e‑commerce platforms</em>,{" "}
-            <em>AI‑assisted tools</em>, and <em>automation dashboards</em> that
-            boost conversions and streamline workflows.
+            I build <strong>production-ready web applications</strong> with a
+            strong focus on{" "}
+            <strong>
+              backend systems, API design, and real-world integrations
+            </strong>
+            . I have hands-on experience implementing{" "}
+            <strong>payment workflows (Razorpay)</strong>,{" "}
+            <strong>shipping systems (Delhivery, Shiprocket)</strong>, and
+            complete <strong>order lifecycle management</strong> using Node.js,
+            MongoDB, and Next.js.
           </p>
 
           {/* Service pillars */}
           <ul className="mt-6 grid grid-cols-2 gap-3 text-sm text-slate-600 dark:text-slate-300">
             <li className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
-              Next.js frontends & design systems
+              Scalable backend APIs (Node.js, Express)
             </li>
             <li className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
-              Node/Express APIs & integrations
+              Payment & shipping integrations
             </li>
             <li className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              E‑commerce (Razorpay, Shiprocket, Delhivery)
+              E-commerce & order management systems
             </li>
             <li className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-violet-500" />
-              Messaging & automation (MSG91, Gmail)
+              Database design & API optimization
             </li>
           </ul>
 
-          {/* Social proof metrics */}
-
+          {/* Metrics */}
           <div className="mt-8 grid grid-cols-3 gap-4 max-w-md">
-            {/* Metric 1 */}
-            <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
-              <div className="text-2xl font-bold">25%+</div>
-              <div className="text-xs text-slate-500">Avg. conversion lift</div>
-            </div>
-
-            {/* Metric 2 */}
-            <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
-              <div className="text-2xl font-bold">~95</div>
-              <div className="text-xs text-slate-500">Lighthouse scores</div>
-            </div>
-
-            {/* Metric 3 */}
             <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
               <div className="text-2xl font-bold">3+</div>
-              <div className="text-xs text-slate-500">Completed Projects</div>
+              <div className="text-xs text-slate-500">Production Projects</div>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+              <div className="text-2xl font-bold">5+</div>
+              <div className="text-xs text-slate-500">API Integrations</div>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+              <div className="text-2xl font-bold">End-to-End</div>
+              <div className="text-xs text-slate-500">Order Systems Built</div>
             </div>
           </div>
 
@@ -105,10 +104,10 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Trusted by logos (placeholders / optional) */}
+          {/* Tech badges */}
           <div className="mt-10">
             <div className="text-xs uppercase tracking-wider text-slate-500">
-              Trusted by builds featuring
+              Technologies & integrations used in real projects
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-3 text-xs">
               <span className="rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1">
@@ -135,7 +134,6 @@ export default function Hero() {
 
         {/* RIGHT: Visual / Case highlight */}
         <div className="relative">
-          {/* Card with gradient border */}
           <div className="group relative overflow-hidden rounded-2xl p-[1px] bg-gradient-to-br from-blue-600/40 via-indigo-500/40 to-violet-500/40">
             <div className="rounded-[15px] h-full w-full bg-white dark:bg-slate-950">
               <div className="p-6">
@@ -146,24 +144,24 @@ export default function Hero() {
                   D&amp;B Jewel – custom jewellery commerce
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                  Built product browsing, customization, secure checkout with
-                  Razorpay, and logistics via Shiprocket. Improved UX and
-                  performance for higher conversions.
+                  Built a full-stack e-commerce platform with product
+                  customization, Razorpay payment integration, and logistics
+                  handling via Shiprocket. Implemented complete order lifecycle
+                  from checkout to delivery.
                 </p>
 
-                {/* Impact bullets */}
                 <ul className="mt-4 space-y-2 text-sm">
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                    Seamless payment & order flow
+                    Integrated payment gateway & checkout system
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
-                    Dynamic catalog & responsive UI
+                    Built dynamic product & cart management
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
-                    Optimized Core Web Vitals
+                    Implemented shipping & order tracking flow
                   </li>
                 </ul>
 
@@ -185,12 +183,10 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Visual placeholder area */}
               <div className="h-44 md:h-56 w-full bg-gradient-to-tr from-slate-200 to-slate-50 dark:from-slate-800 dark:to-slate-900" />
             </div>
           </div>
 
-          {/* Floating stat card */}
           <div className="absolute -bottom-6 -left-6 hidden md:block">
             <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/70 backdrop-blur px-4 py-3 shadow-sm">
               <div className="text-xs text-slate-500">Tech stack snapshot</div>

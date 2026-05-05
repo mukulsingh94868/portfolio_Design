@@ -1,9 +1,8 @@
-export type Project = {
+type Project = {
   slug: string;
   title: string;
   summary: string;
   tech: string[];
-  image?: string;
   live?: string;
   repo?: string;
 };
@@ -11,18 +10,17 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "d-and-b-jewel",
-    title: "D&B Jewel – Custom Jewellery E‑commerce Platform",
+    title: "D&B Jewel – E-commerce Platform with Payment & Logistics",
     summary:
-      "A full‑fledged jewellery e‑commerce platform where users can explore, customize, and purchase jewellery online. The platform integrates Razorpay for secure payments and Shiprocket for logistics. The system includes dynamic product management, user accounts, orders, and a fully responsive and elegant UI.",
+      "Built a full-stack e-commerce platform with product customization, Razorpay payment integration, and Shiprocket logistics. Implemented complete order lifecycle (cart → checkout → delivery) with scalable backend APIs.",
     tech: [
       "Next.js",
-      "Tailwind",
       "Node.js",
       "Express",
       "MongoDB",
-      "ShadCN UI",
       "Razorpay",
       "Shiprocket",
+      "Tailwind",
       "Azure",
     ],
     live: "http://dbjewel.com/",
@@ -30,45 +28,35 @@ export const projects: Project[] = [
   },
   {
     slug: "akg-mattress",
-    title: "AKG Mattress – Mattress & Bedding E‑commerce Website",
+    title: "AKG Mattress – Scalable E-commerce System",
     summary:
-      "An online e‑commerce platform built to help users easily browse and purchase mattresses, pillows, and sofa‑cum‑beds. Includes product filtering, cart management, secure payment integration using Razorpay, logistics powered by Shiprocket, and a modern UI designed for a smooth shopping experience.",
+      "Developed an e-commerce platform with product filtering, cart system, and Razorpay payments. Integrated shipping workflow and built backend APIs for order management and user handling.",
     tech: [
       "Next.js",
-      "Tailwind",
       "Node.js",
       "Express",
       "MongoDB",
-      "ShadCN UI",
       "Razorpay",
       "Shiprocket",
-      "EC2",
+      "AWS EC2",
     ],
     live: "http://spinehealthplus.in/",
     repo: "https://github.com/mukulsingh94868/akg_mattress_website",
   },
   {
     slug: "recruit-loop",
-    title: "RecruitLoop – AI‑Powered Recruitment Automation Panel",
+    title: "RecruitLoop – Recruitment Automation System",
     summary:
-      "A smart recruitment management panel built for recruiters and job seekers. Includes AI‑powered email template generation using Gemini AI, automated email sending, HR email extraction, job‑tracking workflows, and a clean dashboard UI. Designed to streamline and automate recruitment tasks with modern cloud deployment.",
-    tech: [
-      "Next.js",
-      "Tailwind",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Vercel",
-      "Render",
-    ],
+      "Built a recruitment dashboard with automated email workflows and AI-assisted template generation. Designed backend APIs for job tracking, email automation, and user management.",
+    tech: ["Next.js", "Node.js", "Express", "MongoDB", "Vercel", "Render"],
     live: "https://gmail-bot-six.vercel.app",
     repo: "https://github.com/mukulsingh94868/gmail_bot",
   },
   {
     slug: "time-tracker",
-    title: "Time Tracker – Simple and Efficient Time Tracking Service",
+    title: "Time Tracker – Productivity Monitoring Tool",
     summary:
-      "A lightweight time tracking service that allows users to monitor their work hours and productivity. Check custom time as well as automatic time tracking. Given a video tutorial, to show how it works. Built with a modern stack for performance and scalability.",
+      "Developed a lightweight time tracking application to monitor work sessions and productivity. Focused on performance and clean UI with real-time tracking capabilities.",
     tech: ["Next.js", "Tailwind", "Netlify"],
     live: "https://zentek-time-tracker.netlify.app/home",
     repo: "https://github.com/mukulsingh94868/time_tracker",
